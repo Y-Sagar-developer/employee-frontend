@@ -28,7 +28,7 @@ const Edit = () => {
     const fetchEmployee = async () => {
       try {
         const response = await axios.get(
-          `https://employee-frontend-sand-two.vercel.app/api/employee/${id}`,
+          `https://employee-api-olive.vercel.app/api/employee/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -64,7 +64,7 @@ const Edit = () => {
 
     try {
       const response = await axios.put(
-        `https://employee-frontend-sand-two.vercel.app/api/employee/${id}`,
+        `https://employee-api-olive.vercel.app/api/employee/${id}`,
         employee,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

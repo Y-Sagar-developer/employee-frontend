@@ -38,7 +38,7 @@ const Add = () => {
 
     try {
       const response = await axios.post(
-        `https://employee-frontend-sand-two.vercel.app/api/salary/add`,
+        `https://employee-api-olive.vercel.app/api/salary/add`,
         salary,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

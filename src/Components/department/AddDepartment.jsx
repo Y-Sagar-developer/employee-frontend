@@ -16,7 +16,7 @@ const AddDepartment = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://employee-frontend-sand-two.vercel.app/api/department", // ✅ Fixed API URL
+        "https://employee-api-olive.vercel.app/api/department", // ✅ Fixed API URL
         department,
         {
           headers: {

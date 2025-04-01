@@ -230,7 +230,7 @@ const View = () => {
     const fetchEmployee = async () => {
       try {
         const response = await axios.get(
-          `https://employee-frontend-sand-two.vercel.app/api/employee/${id}`,
+          `https://employee-api-olive.vercel.app/api/employee/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -271,7 +271,7 @@ const View = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div className="flex justify-center">
               <img
-                src={`https://employee-frontend-sand-two.vercel.app/${employee?.userId?.profileImage}`}
+                src={`https://employee-api-olive.vercel.app/${employee?.userId?.profileImage}`}
                 alt="Employee Profile"
                 className="w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg"
                 onError={(e) => (e.target.src = "/default-profile.png")}
