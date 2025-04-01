@@ -16,7 +16,7 @@ const Detail = () => {
         }
 
         const response = await axios.get(
-          `http://localhost:5000/api/leave/detail/${id}`, // Fixed URL
+          `https://employee-frontend-sand-two.vercel.app/api/leave/detail/${id}`, // Fixed URL
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -49,7 +49,7 @@ const Detail = () => {
       }
 
       const response = await axios.put(
-        `http://localhost:5000/api/leave/${id}`,{status},// Fixed URL
+        `https://employee-frontend-sand-two.vercel.app/api/leave/${id}`,{status},// Fixed URL
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -88,7 +88,7 @@ const Detail = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div className="flex justify-center">
               <img
-                src={`http://localhost:5000/${leave?.employeeId?.userId?.profileImage}`}
+                src={`https://employee-frontend-sand-two.vercel.app/${leave?.employeeId?.userId?.profileImage}`}
                 alt="Employee Profile"
                 className="w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg"
                 onError={(e) => (e.target.src = "/default-profile.png")}

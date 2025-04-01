@@ -13,7 +13,7 @@ const {user}=useAuth()
   const fetcSalareis = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/salary/${id}/${user.role}`,
+        `https://employee-frontend-sand-two.vercel.app/api/salary/${id}/${user.role}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

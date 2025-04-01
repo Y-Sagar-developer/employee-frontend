@@ -13,7 +13,7 @@ const List = () => {
       setEmpLoading(true);
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/employee",
+          "https://employee-frontend-sand-two.vercel.app/api/employee",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -33,7 +33,7 @@ const List = () => {
             dob: new Date(emp.dob).toDateString(),
             profileImage: (
               <img
-                src={`http://localhost:5000/${emp.userId?.profileImage}`}
+                src={`https://employee-frontend-sand-two.vercel.app/${emp.userId?.profileImage}`}
                 alt="Employee Profile"
                 width={40}
                 className="rounded-full"
